@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import BlogList from './BlogList';
-
+import DeleteModal from './DeleteModal'
 function ReadMore() {
-  const [DeleteOpen, setDeleteOpen] = useState(false)
   const [RemovedID, setRemovedId] = useState(null)
 
   const [blogs, setBlogs] = useState([
@@ -15,25 +14,27 @@ function ReadMore() {
 
     const newBlogs = blogs.filter(blog => blog.id !== RemovedID);
     setBlogs(newBlogs);
+    setRemovedId(null)
+  }
+
+  const handleShowModal = (id) => {
+    setRemovedId(id);
   }
 
   return (
     <div >
-      <BlogList blogs={blogs} title="All Blogs" ShowModal={(id) => { 
-        setRemovedId(id);
-         setDeleteOpen(true)}} />
-         
+      <BlogList blogs={blogs} title="All Blogs" ShowModal={handleShowModal} />
 
-      { DeleteOpen && ( 
-          <div className='modal'> 
-            <p>Are You Sure?</p>
-              <button className='btn btn--alt' onClick={() => setDeleteOpen(false)}>cancel</button>
+      {
+        RemovedID && 
+        <DeleteModal
+          onConfirm={() => {
+            handleDelete();
+          }}
+          onCancle={() => setRemovedId(null)} />
 
-            <button className='btn' onClick={() => {
-              handleDelete();
-              setDeleteOpen(false); }}>  Confirm  </button>
-
-          </div> )}
+      }
+    
     </div>
   );
 }
