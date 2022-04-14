@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  justify-content: space-around;
+  min-height: 10px;
+  background-color: #f1d3e2;
+}
+
+.navbar h1 {
+  color: #232c04;
+}
+
+
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border: 1px solid #887474;
+  text-align: center;
+
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #141313;
+  text-align: center;
+
+
+
+
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: #c45679;
+  margin-bottom: 8px;
+  border: #232c04;
+  text-align: center;
+
+}
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+}
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #800040;
+  color: white;
+  border: 1px solid #800040;
+  margin: 0 1rem;
+}
+
+.btn:hover {
+  background-color: #9c1458;
+  border-color: #9c1458;
+}
+
+.btn--alt {
+  background-color: transparent;
+  color: #800040;
+}
+
+.btn--alt:hover {
+  background-color: #f8dae9;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #dfdfdf;
+}
+.linkstyle{
+  text-decoration: none;
+
+}
+.listyle {
+  text-decoration: none;
+
+
+}
+
+.Todo {
+  background-color: #6e7a819d;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+
+}
+
+.Todo_1 {
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+
+}
+
+.Todo_2 {
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.Todo_3 {
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #800040;
+  color: white;
+  border: 1px solid #800040;
+  margin: 0 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 20rem;
+}
+
+.actions {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  list-style: none;
+}
